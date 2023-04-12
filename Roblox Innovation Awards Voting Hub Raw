@@ -1,0 +1,72 @@
+print("Script Made By ASILBEK YT {Subscribe To ASILBEK YT}")
+local ASILBEK_YT = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Creator = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+ASILBEK_YT.Name = "ASILBEK_YT"
+ASILBEK_YT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ASILBEK_YT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ASILBEK_YT.ResetOnSpawn = false
+
+Frame.Parent = ASILBEK_YT
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 0.700
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.66407764, 0, 0.392572969, 0)
+Frame.Size = UDim2.new(0, 300, 0, 300)
+Frame.Active = true
+Frame.Draggable = true
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 0.500
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 300, 0, 50)
+Title.Font = Enum.Font.Arial
+Title.Text = "Roblox Innovation Awards Voting Hub"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 18.000
+
+Creator.Name = "Creator"
+Creator.Parent = Frame
+Creator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Creator.BackgroundTransparency = 0.500
+Creator.BorderSizePixel = 0
+Creator.Position = UDim2.new(0, 0, 0.829999983, 0)
+Creator.Size = UDim2.new(0, 300, 0, 50)
+Creator.Font = Enum.Font.SourceSans
+Creator.Text = "Creator: ASILBEK YT"
+Creator.TextColor3 = Color3.fromRGB(0, 0, 0)
+Creator.TextSize = 40.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 0.500
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.166666672, 0, 0.413333327, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.Arial
+TextButton.Text = "Get All Items"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 30.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	firetouchinterest(workspace.CubePieces.Block1, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
+	wait(0.50)
+	firetouchinterest(workspace.CubePieces.Block2, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
+	wait(0.50)
+	firetouchinterest(workspace.CubePieces.Block3, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
+	wait(0.50)
+	firetouchinterest(workspace.CubePieces.Block4, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
+	wait(0.50)
+	firetouchinterest(workspace.Scavenger.Circlet, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.CenterPiece.CenterPiece_Stand["Meshes/Stand_Full_Cylinder"].CFrame * CFrame.new(0, 10, 0)
+	wait(1)
+	game.Players.LocalPlayer.Character.Humanoid.WalkToPoint = Vector3.new(0, 0, 10)
+	wait(1)
+	game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
